@@ -1,6 +1,6 @@
 const express = require ('express');
 const mongoose = require('mongoose');
-
+require('dotenv/config')
 const app = express();
 const port = 5000
 
@@ -9,9 +9,9 @@ app.get('/', (req, res) =>{
 })
 
 //CONNECT TO THE DATABASE
-mongoose.connect("mongodb+srv://CodeQueen:CodeQueen@cluster0.crbjiye.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+mongoose.connect(process.env.MONGODBLINK,
   {useNewUrlParser:true}
-  // parsing error
+  // parsing error"mongodb+srv://CodeQueen:CodeQueen@cluster0.crbjiye.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
 ).then(
   ()=>{console.log('Connected to the DB')}
 
