@@ -1,13 +1,16 @@
 const express = require ('express');
 const mongoose = require('mongoose');
 require('dotenv/config')
-const app = express();
+
+const routes = require('./routes')
+
+const app = express(); //CREATING AN EXPRESS APP
 
 //IMPORT ROUTES
 const postsRoute = required('./routes/post')
 
-app.use('/posts',postsRoute)
 //use-middleware
+app.use('/api',routes)
 
 //Routes
 app.get('/', (req, res) =>{
