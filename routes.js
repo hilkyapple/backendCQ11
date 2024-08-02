@@ -1,6 +1,6 @@
-const express = required('express')
+const express = require('express');
 
-const router = express.router()
+const router = express.Router();
 
 //CRUD
 // GET METHOD

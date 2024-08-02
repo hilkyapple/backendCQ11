@@ -7,7 +7,7 @@ const routes = require('./routes')
 const app = express(); //CREATING AN EXPRESS APP
 
 //IMPORT ROUTES
-const postsRoute = required('./routes/post')
+const route = require('./routes')
 
 //use-middleware
 app.use('/api',routes)
