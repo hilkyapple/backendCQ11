@@ -1,4 +1,4 @@
-const mongoose = required('mongoose')
+const mongoose = require('mongoose')
 //SCHEMA-definition of the structure of data in which
 //it is going to be stored and accessed
 const postSchema = new mongoose.Schema({
@@ -15,6 +15,6 @@ const postSchema = new mongoose.Schema({
         type:String,
         required:true
     }
-})
+}) 
 
-module.exports = mongoose.model('Posts',PostSchema);
+module.exports = mongoose.model('Posts',postSchema);

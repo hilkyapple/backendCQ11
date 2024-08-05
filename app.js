@@ -1,5 +1,6 @@
 const express = require ('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser')
 require('dotenv/config')
 
 const routes = require('./routes')
@@ -7,10 +8,12 @@ const routes = require('./routes')
 const app = express(); //CREATING AN EXPRESS APP
 
 //IMPORT ROUTES
-const route = require('./routes')
+const route = require('./routes');
 
 //use-middleware
+app.use(bodyParser.json())
 app.use('/api',routes)
+
 
 //Routes
 app.get('/', (req, res) =>{
